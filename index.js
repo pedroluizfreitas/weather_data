@@ -14,6 +14,9 @@ app.use(express.json({
   limit: "1mb"
 }))
 
+app.get('/', function (request, response) {
+  res.redirect('/api');
+});
 
 app.get('/api', (request, response) => {
   db.find({}, (err, data) => {
