@@ -15,7 +15,7 @@ app.use(express.json({
 }))
 
 app.get('/', function (request, response) {
-  res.redirect('/api');
+  response.redirect('/api');
 });
 
 app.get('/api', (request, response) => {
